@@ -8,7 +8,8 @@
     "test:watch": "node ./node_modules/gulp/bin/gulp.js test:watch",
     "build": "node ./node_modules/gulp/bin/gulp.js --env production",
     "stage": "node ./node_modules/gulp/bin/gulp.js --env staging",
-    "dev": "node ./node_modules/gulp/bin/gulp.js serve"
+    "dev": "node ./node_modules/gulp/bin/gulp.js serve",
+    "run": "node ./server/index.js && node ./node_modules/gulp/bin/gulp.js serve"
   },
   "repository": {
     "type": "git",
