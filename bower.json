@@ -1,0 +1,19 @@
+{
+  "name": "elst",
+  "version": "0.0.0",
+  "authors": [
+    "Mariusz Wójcik"
+  ],
+  "moduleType": [
+    "es6"
+  ],
+  "license": "UNLICENSED",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {}
+}

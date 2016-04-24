@@ -1,0 +1,26 @@
+<div ng-cloak>
+  <md-content>
+    <md-toolbar class="md-hue-2">
+      <div class="md-toolbar-tools">
+        <h2 flex>
+          <span>Test time!</span>
+        </h2>
+<!--         <md-button class="md-icon-button" aria-label="More">
+          <md-icon>more_vert</md-icon>
+        </md-button> -->
+      </div>
+    </md-toolbar>
+    <md-progress-circular ng-if="!questions.length && name" md-mode="indeterminate"></md-progress-circular>
+    <form layout-padding ng-if="questions.length">
+      <div ng-repeat="q in questions">
+        <hr ng-if="!$first"/>
+        <p class="md-title">{{ $index + 1 + '. ' +  q.question }}</p>
+        <md-radio-group ng-model="answers[$index]" ng-change="setAnswer({ questionId: $index})" class="md-primary">
+          <md-radio-button ng-if="!!a" ng-repeat="a in q.answers track by $index" ng-value="{{ $index }}" ng-disabled="q.isDisabled">
+            {{ a }}
+          </md-radio-button>
+        </md-radio-group>
+      </div>
+    </form>
+  </md-content>
+</div>

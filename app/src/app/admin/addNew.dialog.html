@@ -1,0 +1,26 @@
+<md-dialog>
+  <md-dialog-content>
+    <md-list>
+      <form layout-padding>
+        <md-list-item  ng-repeat="q in questions">
+          <hr ng-if="!$first"/>
+          <md-input-container>
+            {{ $index + 1 + '.'}}<input type="text" ng-model="q.question" required>
+          </md-input-container>
+          <md-radio-group ng-model="answers[$index]" ng-change="q.isDisabled = true" class="md-primary">
+            <md-radio-button ng-repeat="a in q.answers" ng-value="{{ $index }}" ng-disabled="q.isDisabled">
+              {{ a }}
+            </md-radio-button>
+          </md-radio-group>
+          <md-input-container>
+            <label>Correct answer</label>
+            <input type="number" ng-model="q.correct" required md-maxlength="10">
+          </md-input-container>
+        </md-list-item>
+      </form>
+    </md-list>
+  </md-dialog-content>
+  <md-dialog-actions>
+    <md-button ng-click="closeDialog()" class="md-primary">Close Dialog</md-button>
+  </md-dialog-actions>
+</md-dialog>
