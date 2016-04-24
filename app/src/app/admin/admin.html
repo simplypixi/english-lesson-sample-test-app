@@ -1,12 +1,11 @@
 <div ng-cloak>
   <md-content layout="row">
-    <span flex></span>
-    <md-tabs md-center-tabs md-dynamic-height md-border-bottom flex-gt-sm="35" flex-gt-md="20" flex="50">
+    <md-tabs md-center-tabs md-dynamic-height md-border-bottom flex="100">
       <md-tab label="Stats">
         <md-content class="md-padding">
-          <div ng-repeat="answer in answers | orderObjectBy:'points':true" layout="column">
+          <div ng-repeat="answer in answers | orderObjectBy:'points':true" layout="column" flex>
             <p class="md-primary">{{ answer.name }}</p>
-            <md-progress-linear md-mode="determinate" ng-value="answer.points"</md-progress-linear>
+            <md-progress-linear md-mode="determinate" ng-value="answer.points"></md-progress-linear>
           </div>
         </md-content>
       </md-tab>

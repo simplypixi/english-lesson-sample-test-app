@@ -1,7 +1,7 @@
 export default ngInject(function HomeController($scope, $mdDialog) {
   let pusher = new Pusher('01854462579932b51fb6', {
     cluster: 'eu',
-    authEndpoint: 'http://localhost:5000/pusher/auth'
+    authEndpoint: 'http://doreki.pl:5000/pusher/auth'
   });
   $scope.answers = [];
 
